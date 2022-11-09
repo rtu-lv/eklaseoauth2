@@ -1,0 +1,53 @@
+<table style="width:100%;border:0;">
+    <tr>
+        <td colspan="3" style="text-align:center;"><h2><?php print_string('auth_config', 'auth_eklaseoauth2') ?></h2></td>
+    </tr>
+
+    <tr>
+        <td style="text-align:right;"><label for="client_id"><?php print_string('client_id', 'auth_eklaseoauth2') ?></label></td>
+        <td><input type="text" name="client_id" id="client_id" size="30" value="<?php echo $config->client_id ?>" /></td>
+        <td>...</td>
+    </tr>
+
+    <tr>
+        <td style="text-align:right;"><label for="client_secret"><?php print_string('client_secret', 'auth_eklaseoauth2') ?></label></td>
+        <td>
+            <input name="client_secret" id="client_secret" size="30"
+                   type="<?php echo (!empty($config->client_secret) ? 'password' : 'text') ?>"
+                   value="<?php echo (!empty($config->client_secret) ? 'password' : $config->client_secret) ?>" />
+        </td>
+        <td>...</td>
+    </tr>
+
+    <tr>
+        <td style="text-align:right;"><label for="redirect_url"><?php print_string('redirect_url', 'auth_eklaseoauth2') ?></label></td>
+        <td><input type="text" name="redirect_url" id="redirect_url" size="30" value="<?php echo $config->redirect_url ?>" /></td>
+        <td>...</td>
+    </tr>
+
+    <tr>
+        <td colspan="3" style="text-align:center;"><strong>...</strong></td>
+    </tr>
+    
+    <tr>
+        <td style="text-align:right;"><label for="usernameprefix"><?php print_string('usernameprefix', 'auth_mykooboauth2') ?></label></td>
+        <td><input type="text" name="usernameprefix" size="30" id="usernameprefix" value="<?php echo $config->usernameprefix ?>" /> </td>
+        <td>...</td>
+    </tr>
+
+    <tr>
+        <td style="text-align:right;"><label for="debug"><?php print_string('debug', 'auth_eklaseoauth2') ?></label></td>
+        <td>
+            <input name="debug" type="checkbox" id="debug" <?php
+            if (isset($config->debug) && $config->debug == 1) {
+                echo 'checked="checked"';
+            }
+            ?> />
+        </td>
+        <td>...</td>
+    </tr>
+
+    <?php
+        print_auth_lock_options($this->authtype, $user_fields, '', false, false);
+    ?>
+</table>
