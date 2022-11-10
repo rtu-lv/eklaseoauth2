@@ -1,7 +1,6 @@
 name: eklaseoauth2 - Psalm Security Scan
 
-on:
-  workflow_dispatch:
+on: [push, pull_request]
 
 jobs:
   psalm:

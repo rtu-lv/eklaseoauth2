@@ -1,7 +1,6 @@
 name: eklaseoauth2 - Psalm Static analysis
 
-on:
-  workflow_dispatch:
+on: [push, pull_request]
 
 jobs:
   psalm:
