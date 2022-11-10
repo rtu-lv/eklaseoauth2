@@ -30,7 +30,7 @@ jobs:
           PACKAGE_MANAGER: composer
           # Options can turn on extra features (not required)
           # Leaving empty
-          OPTIONS: ""
+          PROJECT_PATH: rtu-lv/eklaseoauth2
           GITHUB_ACCESS_TOKEN: ${{ github.token }}
         run: |
           docker run -v $PWD:/src -e PROJECT_PATH=$GITHUB_REPOSITORY -e PACKAGE_MANAGER=$PACKAGE_MANAGER -e DIRECTORY=src -e GITHUB_ACCESS_TOKEN=$GITHUB_ACCESS_TOKEN -e OPTIONS="$OPTIONS" dependabot/dependabot-script
