@@ -1,0 +1,14 @@
+{
+  "name": "rtu-lv/eklaseoauth2",
+  "description": "Moodle - E-klase oAuth2 plugin",
+  "minimum-stability": "stable",
+  "license": "none",
+  "authors": [
+    {
+      "name": "Matīss Broks",
+      "email": "Matiss.Broks@rtu.lv"
+    }
+  ],
+  "require": {
+  }
+}
