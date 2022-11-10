@@ -11,12 +11,9 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Get and run Psalm
-        uses: docker://vimeo/psalm-github-actions
-        with:
-          security_analysis: true
-          report_file: results.sarif
-          
+      - name: Psalm Security Scan
+        uses: docker://ghcr.io/psalm/psalm-security-scan
+        
       - name: Upload Security Analysis results to GitHub
         uses: github/codeql-action/upload-sarif@v1
         with:
