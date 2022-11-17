@@ -1,4 +1,4 @@
-name: eklaseoauth2 - Psalm Static analysis
+name: eklaseoauth2 - Psalm analysis
 
 on: [push, pull_request]
 
