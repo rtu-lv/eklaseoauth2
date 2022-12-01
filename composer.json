@@ -3,6 +3,7 @@
   "description": "Moodle - E-klase oAuth2 plugin",
   "minimum-stability": "stable",
   "license": "none",
+  "version": "1.0.0",
   "authors": [
     {
       "name": "Matīss Broks",
